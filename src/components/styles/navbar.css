@@ -1,0 +1,83 @@
+button{
+    background: #fff;
+    background: #4070f4;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    padding: 0.35rem 1rem;
+    font-weight: 0.25;
+    border-radius: .5rem;
+    margin-left: 3px;
+    outline: none;
+}
+
+button:hover{
+    cursor:pointer;
+    box-shadow: 3px 5px 3px rgb(196, 189, 189);
+}
+
+.nav{
+    width: 100%;
+    box-shadow: 1px 4px 6px 2px rgb(196, 189, 189);
+    height: 44px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0 5px 0;
+    background-color: #faf9f6;
+    backdrop-filter: blur(22px);
+    border: transparent;
+}
+
+.nav-text{
+    left: 30px;
+    font-weight: bold;
+    color: #aca091;
+    pointer-events: none;
+    /* margin-right: 25px; */
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+input{
+    padding-left: 2px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    background: none;
+}
+
+.input-wrapper{
+    height: 30px;
+    border: 1px solid rgb(138, 134, 134);
+     border-radius: .5rem;
+     padding-left: 5px;
+     padding-top: 2px;
+}
+
+/* body{
+    
+    height: 100%;
+    width: 100%;
+} */
+
+@media screen and (max-width: 375px){
+    button{
+         padding: 0.3rem 0.5rem;
+    }
+    input{
+        width: 75px;
+        font-size: 12px;
+    }
+    .input-wrapper{
+        margin-right: 10px;
+    }
+    .nav{
+        justify-content: space-evenly;
+    }
+}
