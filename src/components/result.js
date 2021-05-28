@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Recipe from "./Recipe";
+import './styles/result.css'
 
 const Results = ({ match: { params } }) => {
   const appid = "05a78797";

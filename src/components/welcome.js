@@ -1,25 +1,50 @@
-import React from 'react';
-import './styles/welcome.css'
-import image from './img/food.png'
+import React from "react";
+import "./styles/welcome.css";
+import image from "./img/food.png";
+import { useRef } from "react";
 
 const Welcome = () => {
-    return (
-        <div className='landing'>
-            <div className="orient-left">
-                <h1>Get simple choice recipes</h1>
-                <p>Prepare exquisite dishes quicly and efficiently.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis tempore architecto nihil, deleniti ducimus 
-                eum earum vel omnis, ipsum natus fugit recusandae. Unde veniam
-                dolore nesciunt, animi error assumenda eveniet?
-                </p>
-                <button className='btng'>Get Recipes</button>
-            </div>
-            <div className="orient-right">
-                <img src={image} alt=""/>
-            </div>
-            <div className="scroll"><span></span></div>
-        </div>
-    )
-}
+  const ref = useRef("");
+
+  window.onscroll = (e) => {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      ref.current.classList.add("fred");
+    } else {
+      ref.current.classList.remove("fred");
+    }
+  };
+
+  return (
+    <div className="landing">
+      <div className="orient-left">
+        <h1>Get Simple Recipe Choices</h1>
+        <p>
+          <b>Hungry?</b> wandering what to eat. we've got you covered. Browse
+          through
+          <br />
+          our huge sets of dishes, find the one that meets
+          <br />
+          your culinary demands.Recipes containing calories and nutrients
+          <br />
+          to help cater for your dietary needs.
+          <br />
+          Simple to prepare, well balanced dishes...
+          <br />
+          Simply delicious. Enjoy!
+        </p>
+        <button className="btng">Get Recipes</button>
+      </div>
+      <div className="orient-right">
+        <img src={image} alt="" />
+      </div>
+      <div className="scroll" ref={ref}>
+        <span></span>
+      </div>
+    </div>
+  );
+};
 
 export default Welcome;
