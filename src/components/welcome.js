@@ -27,7 +27,7 @@ const Welcome = () => {
   return (
     <div className="landing">
       <div className="orient-left">
-        <h1>Get Simple Recipe Choices</h1>
+        <h1 id="col">Get Simple Recipe Choices</h1>
         <p>
           <b>Hungry?</b> wandering what to eat. we've got you covered. Browse
           through
