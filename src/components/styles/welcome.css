@@ -27,6 +27,11 @@
   opacity: 80%;
 }
 
+#col {
+  color: #4070f4;
+  opacity: 80%;
+}
+
 .orient-left p {
   color: rgb(78, 76, 76);
   font-size: 20px;
