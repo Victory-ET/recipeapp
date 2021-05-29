@@ -2,14 +2,19 @@ import React from "react";
 import "./styles/welcome.css";
 import image from "./img/food.png";
 import { useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 // import { Link } from "react-router-dom";
 
 const Welcome = () => {
   const ref = useRef("");
-
-  if (window.location.pathname === "/") {
-    window.onscroll = (e) => {
+  const location = useLocation();
+  console.log(location.pathname);
+  // location.pathname === "/" &&  location.href === location.origin
+  window.onscroll = () => {
+    if (location.pathname !== "/") {
+      console.log("seconded");
+    } else if (location.pathname === "/") {
       if (
         document.body.scrollTop > 50 ||
         document.documentElement.scrollTop > 50
@@ -18,12 +23,11 @@ const Welcome = () => {
       } else {
         ref.current.classList.remove("fred");
       }
-    };
-  } else {
-  }
-  console.log(window.location.href);
-  console.log(window.location.pathname);
-  console.log("window.location.pathname");
+    }
+  };
+  // console.log(window.location.href);
+  // console.log(window.location.pathname);
+  // console.log("window.location.pathname");
   return (
     <div className="landing">
       <div className="orient-left">

@@ -51,12 +51,12 @@ input {
   padding-left: 2px;
   border: none;
   outline: none;
-  font-weight: bold;
+  font-weight: 600;
   background: none;
 }
 
 input::placeholder {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .input-wrapper {

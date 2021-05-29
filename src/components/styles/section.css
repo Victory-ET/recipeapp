@@ -29,6 +29,17 @@
   background: #fff;
 }
 
+/* .categories span:nth-child(5) p,
+.categories span:nth-child(8) p,
+.categories span:nth-child(9) p {
+  font-size: 22px;
+} */
+
+.categories span:nth-child(5) p::after,
+.categories span:nth-child(8) p::after,
+.categories span:nth-child(9) p::after {
+  bottom: 30px;
+}
 .categories span:hover {
   cursor: pointer;
   box-shadow: 1px 41px 60px 5px rgba(182, 180, 180, 0.25);
