@@ -5,6 +5,7 @@ import "./App.css";
 import Section from "./components/section";
 // import Result from "./components/result";
 import Welcome from "./components/welcome";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Welcome />
       <Section />
+      <Footer/>
     </div>
   );
 }

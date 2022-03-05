@@ -11,20 +11,26 @@ const Welcome = () => {
   const location = useLocation();
   console.log(location.pathname);
   // location.pathname === "/" &&  location.href === location.origin
-  window.onscroll = () => {
-    if (location.pathname !== "/") {
-      console.log("seconded");
-    } else if (location.pathname === "/") {
-      if (
-        document.body.scrollTop > 50 ||
-        document.documentElement.scrollTop > 50
-      ) {
-        ref.current.classList.add("fred");
-      } else {
-        ref.current.classList.remove("fred");
-      }
-    }
-  };
+  // window.addEventListener("scroll", hide);
+  // function hide() {
+  //   if (location.pathname !== "/") {
+  //     window.removeEventListener("scroll", hide);
+  //   } else if (location.pathname === "/") {
+  //     if (
+  //       document.body.scrollTop > 50 ||
+  //       document.documentElement.scrollTop > 50
+  //     ) {
+  //       ref.current.classList.add("fred");
+  //     } else {
+  //       console.log(location.pathname);
+  //       console.log(ref.current);
+  //       ref.current.classList.remove("fred");
+  //     }
+  //   } else {
+  //     window.removeEventListener("scroll", hide);
+  //   }
+  // }
+
   // console.log(window.location.href);
   // console.log(window.location.pathname);
   // console.log("window.location.pathname");
@@ -46,7 +52,7 @@ const Welcome = () => {
           <br />
           Simply delicious. Enjoy!
         </p>
-        <button className="btng">Get Recipes</button>
+        <button className="btng"><a href="#foodies">Get Recipes</a></button>
       </div>
       <div className="orient-right">
         <img src={image} alt="" />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Recipe from "./Recipe";
 import "./styles/result.css";
+import Footer from "./Footer";
 
 const Results = ({ match: { params } }) => {
   const appid = "05a78797";
@@ -19,19 +20,27 @@ const Results = ({ match: { params } }) => {
       setRecipes(data.hits);
     };
     getRecipe();
-  });
+  }, []);
 
   return (
     <div>
-      {recipes.map((recipe) => (
-        <Recipe
-          title={recipe.recipe.label}
-          calories={recipe.recipe.calories}
-          image={recipe.recipe.image}
-          key={recipe.recipe.label}
-          ingredients={recipe.recipe.ingredients}
-        />
-      ))}
+      <div className="yummy">
+        <div>
+          <h3>Yummy food recipes...</h3>
+        </div>
+      </div>
+      <div className="recipe-home">
+        {recipes.map((recipe) => (
+          <Recipe
+            title={recipe.recipe.label}
+            calories={recipe.recipe.calories}
+            image={recipe.recipe.image}
+            key={recipe.recipe.label}
+            ingredients={recipe.recipe.ingredients}
+          />
+        ))}
+      </div>
+      <Footer />
     </div>
   );
 };

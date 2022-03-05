@@ -169,3 +169,18 @@ span a p {
     width: 30px;
   }
 }
+
+
+.footer-cont{
+  background-color: #4070f4;
+  width: 100%;
+  padding: 19px 0;
+  text-align: center;
+}
+
+.footer-cont h3{
+  margin: 0;
+  color: #fff;
+  font-family: monospace;
+  font-size: 18px;
+}

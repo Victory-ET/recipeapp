@@ -30,7 +30,12 @@ const Section = () => {
     </span>
   ));
   return (
-    <div className="categories">{fooditems}</div>
+    <>
+      <h2 className="foodie">Pick a food category....</h2>
+      <div className="categories" id="foodies">
+        {fooditems}
+      </div>
+    </>
     // <div className="categories">
     //   <span>
     //     <Link to="/Result">

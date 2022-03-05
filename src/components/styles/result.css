@@ -1,5 +1,86 @@
 .recipe-home {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: auto auto auto;
   position: relative;
+  background-color: #e0e0e0;
+  padding: 20px 10px;
+  gap: 50px 50px;
+}
+
+.foodie{
+  text-align: center;
+  margin-top: 50px;
+  color: #4070f4;
+  font-family: cursive;
+}
+
+.recipe-home h1 {
+  font-size: 14px;
+  max-width: 400px;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50px;
+  background: #e0e0e0;
+  padding: 10px 0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.recipe-home .items img {
+  border-radius: 50%;
+  border: 12px solid #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+
+.inner-item {
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 5px 8px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.inner-item:nth-child(even) {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .recipe-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .inner-item{
+    max-width: 500px;
+  }
+  .inner-item:nth-child(even){
+    margin-top: 0;
+  }
+}
+  
+.yummy{
+  background-color: #e0e0e0;
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yummy div{
+  box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 40px #ffffff;
+  border-radius: 15px;
+  padding: 8px 18px;
+  color: #4070f4;
+  font-family: monospace;
 }

@@ -3,16 +3,19 @@ import "./styles/result.css";
 
 const Recipe = ({ title, calories, image, ingredients }) => {
   return (
-    <div className="recipe-home">
-      <h1>{title}</h1>
-      <ol>
-        {ingredients.map((ingredient) => (
-          <li key={Math.random()}>{ingredient.text}</li>
-        ))}
-      </ol>
-      <p>{calories}</p>
-      <img src={image} alt=""></img>
-    </div>
+      <div className="items">
+        <h1>{title}</h1>
+        <div className="inner-item">
+          <ol>
+            {ingredients.map((ingredient) => (
+              <li key={Math.random()}>{ingredient.text}</li>
+            ))}
+          </ol>
+          <h4>Ingredients</h4>
+          <p>Calories: {calories} Kcal</p>
+          <img src={image} alt=""></img>
+        </div>
+      </div>
   );
 };
 
