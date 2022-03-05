@@ -20,7 +20,7 @@ const Results = ({ match: { params } }) => {
       setRecipes(data.hits);
     };
     getRecipe();
-  }, []);
+  }, [params.id]);
 
   return (
     <div>
